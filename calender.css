@@ -1,0 +1,165 @@
+body {
+    background-color: #e9dec8;
+    background-image: url("https://img.freepik.com/premium-vector/modern-abstract-background_200180-165.jpg");
+    background-size: cover;
+    margin-top: 7rem;
+    display:flex;
+    
+}
+#calendar {
+    
+    display: flow-root;
+    margin-top: 1rem;
+    margin-left: 32rem;
+    margin-right:7rem;
+    margin-bottom: 2rem;
+    width: 410px;
+    height: 590px;
+    border-radius: 8px;
+    font-family: "Lato", sans-serif;
+}
+@keyframes glow-pulse {
+    0% { border-color: red; box-shadow: 0 0 50px red; }
+    25% { border-color: yellow; box-shadow: 0 0 40px yellow; }
+    50% { border-color: rgb(242, 24, 169); box-shadow: 0 0 30px rgb(230, 18, 212); }
+    75% { border-color: blue; box-shadow: 0 0 60px blue; }
+    100% { border-color: rgb(211, 8, 211); box-shadow: 0 0 80px rgb(209, 11, 209); }
+}
+
+#calendar {
+    
+        border: 5px solid red;
+        animation: glow-pulse 3s infinite;
+    
+    
+}
+/**/
+#calendar_weekdays div {
+    display: inline-block;
+    vertical-align: top;
+}
+#calendar_content,
+#calendar_weekdays,
+#calendar_header {
+    position: relative;
+    width: 320px;
+    overflow: hidden;
+    float: left;
+    z-index: 10;
+}
+
+#calendar_weekdays div,
+#calendar_content div {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f2f4f3;
+    color: #100f0f;
+}
+#calendar_content {
+    
+    -webkit-border-radius: 0px 0px 12px 12px;
+    -moz-border-radius: 0px 0px 12px 12px;
+    border-radius: 0px 0px 12px 12px;
+}
+#calendar_content div {
+    float: left;
+}
+#calendar_content div:hover {
+    background-color: #7e6a6a;
+}
+#calendar_content div.blank {
+    background-color: #faedcf;
+}
+#calendar_header,
+#calendar_content div.today {
+    zoom: 1;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+#calendar_content div.today {
+    color: #d61818;
+}
+#calendar_header {
+    width: 100%;
+    height: 37px;
+    text-align: center;
+    background-color: #e65e57;
+    padding: 18px 0;
+    -webkit-border-radius: 12px 12px 0px 0px;
+    -moz-border-radius: 12px 12px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+}
+#calendar_header h1 {
+    font-size: 1.5em;
+    color: #f5efe5;
+    float: left;
+    width: 70%;
+}
+i[class^="icon-chevron"] {
+    color: #f7efef;
+    float: left;
+    width: 15%;
+    border-radius: 50%;
+}
+/* */
+#falling-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .falling-drop {
+    position: absolute;
+    top: -50px;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+
+    
+    background: rgba(242, 224, 28, 0.501);
+box-shadow: 0 8px 32px 0 rgba(203, 195, 171, 0.37);
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 2px solid rgba(235, 193, 23, 0.18);
+
+
+
+   /*background-color: #dfd764;*/
+    border-radius: 50%; /* Make the shape round */
+    animation: falling 4s linear infinite;
+
+  }
+  
+  @keyframes falling {
+    0% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(calc(100vh + 50px));
+    }
+  }
+
+  .left-falling-drop {
+    left: -10%; /* Adjust the left position for the left side */
+  }
+  
+  .right-falling-drop {
+    left: -10%; /* Adjust the left position for the right side */
+  }
+  
+
+
+  
+  
+  
+  
+  
+  
+
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Timer</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css">
+  <link rel="stylesheet" href="time.css">
+</head>
+<body>
+  <input type="button" onclick="window.location.href='e1.html';" value="Home" class="custom-button" />
+  <input type="button" onclick="window.location.href='calender.html';" value="Calendar" class="custom-button1" />
+  <style>
+   /* Button Styles */
+  .custom-button {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #2955e6;
+    color: #fefbf4;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #374048;
+  }
+  
+  /* Button1 Styles */
+  .custom-button1  {
+          position:fixed;
+          top: 0.5rem;
+          left: 9rem;
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          background-color: #2955e6;
+          color: #fefbf4;
+          transition: background-color 0.3s ease;
+          
+        }
+        
+        .custom-button1:hover {
+          background-color: #374048;
+        }
+  </style>
+  
+
+  
+  <div class="pomodoro">
+    <div class="pomodoro">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row"><p>Session length</p></div>
+          <div class="row counter">
+            <div class="col-md-4">
+              <button class="btn btn-default" id="sessDec">   -   </button>        
+            </div>
+            <div class="col-md-2">
+              <div id="session"></div>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-default" id="sessInc">+</button>
+            </div>
+          </div>
+        </div>
+    
+        
+      </div>
+        
+      <div id="clock" class="row">
+        <div class="timer"><div class="middle"></div></div>
+      </div>
+      <div class="row" id="statRow">
+        <button class="stats" id="stats"></button>
+      </div>
+      <div class="container">
+        <div class="row" id="btns">
+          <button class="btn btn-default btn-lg" id="start">start</button>
+
+          <button class="btn btn-default btn-lg" id="stop">stop</button>
+          <button class="btn btn-default btn-lg" id="clear">clear</button>
+        </div>
+      </div>
+    </div>
+ </div>
+<div id="falling-container">
+  <div class="falling-drop left-falling-drop"></div>
+  <div class="falling-drop right-falling-drop"></div>
+</div>
+
+
+<!---->
+
+<div class="clock">
+  <h1 class="clocktxt">Live Time </h1>
+  <style>
+     
+    .clocktxt{
+      font-size: 70%;
+      font-style: oblique;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+     }
+  </style>
+  <div class="flip-clock">
+    <span class="clock-hours"></span>
+    <span class="clock-minutes"></span>
+    <span class="clock-seconds"></span>
+    <span class="clock-milliseconds">000</span>
+    <span class="clock-ampm"></span> 
+  </div>
+</div>
+<div id="countdown-end-time" class="countdown-end-time"></div>
+<style>
+  .countdown-end-time {
+    font-size: 2em;
+    border-radius: 15px;
+    left: 36rem;
+    right:auto;
+    bottom: 5rem;
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: none; /* Initially hide the end time */
+    border: 2px solid white; /* Add a border to the element */
+      box-shadow: 0 0 10px white; /* Add a white glow effect */
+      padding: 4px;
+      background: linear-gradient(to left, #f8f1fa, #bbb8a5); /* Apply gradient background */
+      -webkit-background-clip: text; /* Clip the background to the text */
+      -webkit-text-fill-color: transparent; /* Make the text transparent */
+      animation: glowPulse 2s infinite; /* Apply glow pulse animation */
+    }
+
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 20px white;
+      }
+      50% {
+        box-shadow: 0 0 30px white;
+      }
+      100% {
+        box-shadow: 0 0 40px white;
+      }
+    }
+
+.countdown-end-time-show {
+ 
+  display: block; /* Show the end time */
+  /* Add your custom styling for the displayed end time */
+}
+
+</style>
+<script src="time.js"></script>
+</body>
+</html>
+
